@@ -1,0 +1,11 @@
+{
+  "name": "socialnetworkserver",
+  "version": "1.0.0",
+  "description": "social network backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pbbaque",
+  "license": "ISC"
+}
