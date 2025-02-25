@@ -5,6 +5,8 @@ export interface IUser extends Document {
     email:string;
     password:string;
     avatar: string;
+
+    comparePass(password:string):boolean;
 }
 
 
