@@ -62,6 +62,3 @@ El servidor correrá en `http://localhost:3000`.
 - `PUT /post/update/:id` - Actualiza una publicación
 - `DELETE /post/delete:/id` - Elimina una publicación
 
-## Licencia
-Este proyecto está bajo la licencia MIT.
-
