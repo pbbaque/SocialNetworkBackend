@@ -59,9 +59,6 @@ El servidor correrá en `http://localhost:3000`.
 - `POST /posts/:id/like` - Da "like" a una publicación
 - `POST /posts/:id/comment` - Agrega un comentario a una publicación
 
-## Contribución
-Si deseas contribuir, haz un fork del repositorio, crea una rama y envía un pull request.
-
 ## Licencia
 Este proyecto está bajo la licencia MIT.
 
