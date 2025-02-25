@@ -6,7 +6,7 @@ Esta es una API RESTful construida con Node.js, Express y MongoDB para la gesti�
 ## Tecnologías Utilizadas
 - Node.js
 - Express.js
-- MongoDB (Mongoose)
+- MongoDB con Mongoose
 - JWT para autenticación
 - Multer para la gestión de imágenes
 
@@ -37,27 +37,30 @@ Esta es una API RESTful construida con Node.js, Express y MongoDB para la gesti�
    
 ## Uso
 ### Iniciar el servidor
+utiliza los comandos de typescript en modo observador: 
 ```sh
-npm start
+tsc -w
+```
+Para compilar y ejecutar la API en modo desarrollo utiliza nodemon:
+```sh
+nodemon dist
 ```
 El servidor correrá en `http://localhost:3000`.
 
 ### Endpoints
 #### Usuarios
-- `GET /users` - Obtiene todos los usuarios
-- `POST /users` - Crea un nuevo usuario
-- `GET /users/:id` - Obtiene un usuario por ID
-- `PUT /users/:id` - Actualiza un usuario
-- `DELETE /users/:id` - Elimina un usuario
+- `GET /user` - Obtiene todos los usuarios
+- `POST /user/create` - Crea un nuevo usuario
+- `GET /user/:id` - Obtiene un usuario por ID
+- `PUT /user/update` - Actualiza un usuario
+- `DELETE /user/delete` - Elimina un usuario
 
 #### Publicaciones
-- `GET /posts` - Obtiene todas las publicaciones
-- `POST /posts` - Crea una nueva publicación
-- `GET /posts/:id` - Obtiene una publicación por ID
-- `PUT /posts/:id` - Actualiza una publicación
-- `DELETE /posts/:id` - Elimina una publicación
-- `POST /posts/:id/like` - Da "like" a una publicación
-- `POST /posts/:id/comment` - Agrega un comentario a una publicación
+- `GET /post` - Obtiene todas las publicaciones
+- `POST /post/create` - Crea una nueva publicación
+- `GET /post/:id` - Obtiene una publicación por ID
+- `PUT /post/update/:id` - Actualiza una publicación
+- `DELETE /post/delete:/id` - Elimina una publicación
 
 ## Licencia
 Este proyecto está bajo la licencia MIT.
