@@ -1,0 +1,64 @@
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Archivos de configuración y entornos
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Archivos de compilación y salida
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Logs y perfiles de ejecución
+logs/
+*.log
+*.log.*
+log/
+debug.log
+error.log
+output.log
+profiling/
+
+# Caché de dependencias y herramientas
+.npm/
+.npmrc
+.yarn/
+.yarnrc
+.pnp.*
+.pnp.js
+
+# Archivos de bases de datos temporales
+*.sqlite
+*.sqlite3
+db.json
+
+# Configuración de IDEs y editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Desplegables y archivos sensibles
+docker-compose.override.yml
+.DS_Store
+Thumbs.db
+
+# Archivos de test y cobertura
+.jest/
+.nyc_output/
