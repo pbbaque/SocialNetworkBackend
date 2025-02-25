@@ -17,7 +17,7 @@ Esta es una API RESTful construida con Node.js, Express y MongoDB para la gesti√
 3. **Iniciar el servidor de MongoDB**:
    - Abre una terminal y ejecuta:
      ```sh
-     mongod.exe --dbpath "C:\\data\\db"
+     C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe --dbpath "C:\\data\\db"
      ```
    - Aseg√∫rate de que la ruta `C:\\data\\db` existe o cambia la ruta a una personalizada.
 
@@ -37,12 +37,17 @@ Esta es una API RESTful construida con Node.js, Express y MongoDB para la gesti√
    
 ## Uso
 ### Iniciar el servidor
-utiliza los comandos de typescript en modo observador: 
+Accede al directorio del proyecto
+```sh
+ cd tu-repositorio
+```
+Utiliza los comandos de typescript en modo observador: 
 ```sh
 tsc -w
 ```
 Para compilar y ejecutar la API en modo desarrollo utiliza nodemon:
 ```sh
+cd tu-repositorio
 nodemon dist
 ```
 El servidor correr√° en `http://localhost:3000`.
