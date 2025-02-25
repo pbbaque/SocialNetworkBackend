@@ -1,73 +1,67 @@
 # Social Network API
 
 ## Descripción
-API RESTful creada con Node.js y Express para gestionar usuarios y publicaciones en una red social ficticia.
-Incluye funcionalidades básicas para la gestión de usuarios y publicaciones, permitiendo la inclusión de imágenes, comentarios y likes.
-
-## Características
-- CRUD de usuarios (Crear, Leer, Actualizar, Eliminar)
-- CRUD de publicaciones (Crear, Leer, Actualizar, Eliminar)
-- Gestión de imágenes en publicaciones
-- Sistema de comentarios en publicaciones
-- Sistema de "likes" en publicaciones
+Esta es una API RESTful construida con Node.js, Express y MongoDB para la gestión de usuarios y publicaciones en una red social ficticia. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) tanto para usuarios como para publicaciones. Las publicaciones pueden incluir imágenes, comentarios y "likes".
 
 ## Tecnologías Utilizadas
 - Node.js
 - Express.js
-- MongoDB + Mongoose
-- Multer (para la gestión de imágenes)
-- JSON Web Token (JWT) para autenticación
-- Bcrypt.js para encriptación de contraseñas
+- MongoDB (Mongoose)
+- JWT para autenticación
+- Multer para la gestión de imágenes
 
 ## Instalación
-1. Clona el repositorio:
+### Requisitos previos
+1. **Instalar Node.js y npm**: Descarga e instala Node.js desde [aqui](https://nodejs.org/).
+2. **Instalar MongoDB**: Descarga e instala MongoDB desde [aqui](https://www.mongodb.com/try/download/community).
+3. **Iniciar el servidor de MongoDB**:
+   - Abre una terminal y ejecuta:
+     ```sh
+     mongod.exe --dbpath "C:\\data\\db"
+     ```
+   - Asegúrate de que la ruta `C:\\data\\db` existe o cambia la ruta a una personalizada.
+
+### Instalación del proyecto
+1. Clona este repositorio:
    ```sh
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/tu-usuario/tu-repositorio.git
    ```
 2. Accede al directorio del proyecto:
    ```sh
-   cd tu_repositorio
+   cd tu-repositorio
    ```
 3. Instala las dependencias:
    ```sh
    npm install
    ```
-4. Inicia el servidor:
-   ```sh
-   npm start
-   ```
+   
+## Uso
+### Iniciar el servidor
+```sh
+npm start
+```
+El servidor correrá en `http://localhost:3000`.
 
-## Endpoints Principales
+### Endpoints
+#### Usuarios
+- `GET /users` - Obtiene todos los usuarios
+- `POST /users` - Crea un nuevo usuario
+- `GET /users/:id` - Obtiene un usuario por ID
+- `PUT /users/:id` - Actualiza un usuario
+- `DELETE /users/:id` - Elimina un usuario
 
-### Usuarios
-- `POST /api/users` - Crear usuario
-- `GET /api/users` - Obtener todos los usuarios
-- `GET /api/users/:id` - Obtener usuario por ID
-- `PUT /api/users/:id` - Actualizar usuario
-- `DELETE /api/users/:id` - Eliminar usuario
+#### Publicaciones
+- `GET /posts` - Obtiene todas las publicaciones
+- `POST /posts` - Crea una nueva publicación
+- `GET /posts/:id` - Obtiene una publicación por ID
+- `PUT /posts/:id` - Actualiza una publicación
+- `DELETE /posts/:id` - Elimina una publicación
+- `POST /posts/:id/like` - Da "like" a una publicación
+- `POST /posts/:id/comment` - Agrega un comentario a una publicación
 
-### Publicaciones
-- `POST /api/posts` - Crear publicación
-- `GET /api/posts` - Obtener todas las publicaciones
-- `GET /api/posts/:id` - Obtener publicación por ID
-- `PUT /api/posts/:id` - Actualizar publicación
-- `DELETE /api/posts/:id` - Eliminar publicación
+## Contribución
+Si deseas contribuir, haz un fork del repositorio, crea una rama y envía un pull request.
 
-### Comentarios
-- `POST /api/posts/:id/comments` - Agregar comentario a publicación
-- `DELETE /api/posts/:id/comments/:commentId` - Eliminar comentario
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
-### Likes
-- `POST /api/posts/:id/like` - Dar like a una publicación
-- `DELETE /api/posts/:id/like` - Quitar like a una publicación
-
-## Estado del Proyecto
-🚧 En desarrollo. Se agregarán mejoras y optimizaciones en futuras versiones.
-
-## Contribuciones
-Las contribuciones son bienvenidas. Para colaborar:
-1. Realiza un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y confirma los commits (`git commit -m "Añadir nueva funcionalidad"`).
-4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
