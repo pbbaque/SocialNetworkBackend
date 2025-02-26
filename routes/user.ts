@@ -6,6 +6,15 @@ import { verificationToken } from "../middlewares/authentication";
 
 const userRoutes = Router();
 
+
+userRoutes.get('/', verificationToken, (req: any, res: Response) => {
+    const user = req.user;
+    res.json({
+        ok:true,
+        user
+    });
+});
+
 userRoutes.post('/login', (req: Request, res: Response) => {
     //login del usuario con los datos de la request
     const body = req.body;
