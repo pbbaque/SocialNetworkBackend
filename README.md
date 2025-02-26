@@ -1,14 +1,14 @@
 # Social Network API
 
 ## Descripción
-Esta es una API RESTful construida con Node.js, Express y MongoDB para la gestión de usuarios y publicaciones en una red social ficticia. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) tanto para usuarios como para publicaciones. Las publicaciones pueden incluir imágenes, comentarios y "likes".
+Esta es una API RESTful construida con Node.js, Express y MongoDB para la gestión de usuarios y publicaciones en una red social ficticia. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) para usuarios y (Crear, Leer) para publicaciones. Las publicaciones pueden incluir imágenes y comentarios.
 
 ## Tecnologías Utilizadas
 - Node.js
 - Express.js
 - MongoDB con Mongoose
 - JWT para autenticación
-- Multer para la gestión de imágenes
+- Express fileupload para la gestión de imagenes
 
 ## Instalación
 ### Requisitos previos
@@ -54,16 +54,15 @@ El servidor correrá en `http://localhost:3000`.
 
 ### Endpoints
 #### Usuarios
-- `GET /user` - Obtiene todos los usuarios
+- `GET /user` - Obtiene el usuario verificado mediante el token
 - `POST /user/create` - Crea un nuevo usuario
-- `GET /user/:id` - Obtiene un usuario por ID
+- `POST /user/login` - Logea el usuario mediante email y contraseña y devuelve el token de verificacion
 - `PUT /user/update` - Actualiza un usuario
 - `DELETE /user/delete` - Elimina un usuario
 
 #### Publicaciones
-- `GET /post` - Obtiene todas las publicaciones
+- `GET /post/:page` - Obtiene todas las publicaciones paginadas
 - `POST /post/create` - Crea una nueva publicación
-- `GET /post/:id` - Obtiene una publicación por ID
-- `PUT /post/update/:id` - Actualiza una publicación
-- `DELETE /post/delete:/id` - Elimina una publicación
+- `POST /upload` - Obtiene una publicación por ID
+- `GET /post/image/:id/:img` - Obtiene la imagen buscando por el id del usuario y el nombre de la imagen
 
