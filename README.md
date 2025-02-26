@@ -62,7 +62,7 @@ El servidor correrá en `http://localhost:3000`.
 
 #### Publicaciones
 - `GET /post/:page` - Obtiene todas las publicaciones paginadas
+- `GET /post/image/:id/:img` - Obtiene la imagen buscando por el id del usuario y el nombre de la imagen
 - `POST /post/create` - Crea una nueva publicación
 - `POST /upload` - Obtiene una publicación por ID
-- `GET /post/image/:id/:img` - Obtiene la imagen buscando por el id del usuario y el nombre de la imagen
 
