@@ -41,10 +41,6 @@ Accede al directorio del proyecto
 ```sh
  cd tu-repositorio
 ```
-Utiliza los comandos de typescript en modo observador: 
-```sh
-tsc -w
-```
 Para compilar y ejecutar la API en modo desarrollo utiliza nodemon:
 ```sh
 cd tu-repositorio
