@@ -43,7 +43,6 @@ Accede al directorio del proyecto
 ```
 Para compilar y ejecutar la API en modo desarrollo utiliza nodemon:
 ```sh
-cd tu-repositorio
 nodemon dist
 ```
 El servidor correrá en `http://localhost:3000`.
