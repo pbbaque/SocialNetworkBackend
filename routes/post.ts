@@ -98,7 +98,4 @@ postRoutes.get('/image/:id/:img', (req:any, res:Response) => {
 
 });
 
-
-
-
 export default postRoutes;
